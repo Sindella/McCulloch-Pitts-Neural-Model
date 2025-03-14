@@ -12,17 +12,24 @@ def get_inputs():                                 #users select inputs here
     
     return inputs
 
-def mcculloch_pitts_model(inputs, func_select):   #user select the function want to use here
+def bias(inputs, fbias):     #func that sums inputs and subtracts the bias from them
     total_sum = sum(inputs)
     input_number = len(inputs)
 
+    return total_sum-fbias
+
+def mcculloch_pitts_model(inputs, func_select):   #user select the function want to use here
+    input_number = len(inputs)
+    
     if func_select == 1:  #AND Function
-        bias = input_number - 1
-        return 1 if total_sum >= bias else 0
+        fbias=input_number
+        return 1 if bias(inputs, fbias)>=0 else 0 #AND Activation Function
     elif func_select == 2:  #OR Function
-        return 1 if total_sum > 0 else 0
+        fbias=1
+        return 1 if bias(inputs, fbias)>=0 else 0 #OR Activation Function
     elif func_select == 3:  #NOR Function
-        return 0 if total_sum > 0 else 1
+        fbias=1
+        return 0 if bias(inputs, fbias)>=0 else 1 #NOR Activation Function
     else:
         print("Invalid function selection.")
         exit()
