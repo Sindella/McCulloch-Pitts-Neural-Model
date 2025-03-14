@@ -3,7 +3,7 @@ def get_inputs():                                 #users select inputs here
     inputs = []
     
     for i in range(input_number):
-        inp = input("Enter the input (0 or 1): ") #McCulloch-Pitts Neural Model only accepts digit inputs.
+        inp = input("Enter the input (0 or 1): ") #McCulloch-Pitts Neural Model only accepts binary inputs.
         if inp in ("0", "1"):
             inputs.append(int(inp))
         else:
