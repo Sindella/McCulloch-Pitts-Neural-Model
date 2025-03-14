@@ -8,9 +8,7 @@ This repository contains a Python implementation of the McCulloch-Pitts model, a
 ## How It Works
 The McCulloch-Pitts neuron processes inputs using a weighted sum and a threshold (bias) to determine the output:
 
-\[ y = f(\sum x_i) \]
-
-where \( f \) is a step function that outputs either 0 or 1 depending on whether the weighted sum exceeds the threshold.
+![image](https://github.com/user-attachments/assets/ab6c851d-4e7e-44eb-b2ae-00dee24005c7)
 
 ### Supported Logic Functions
 - **AND Function:** Outputs 1 only if all inputs are 1.
