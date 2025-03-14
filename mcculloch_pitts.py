@@ -7,7 +7,7 @@ def get_inputs():                                 #users select inputs here
         if inp in ("0", "1"):
             inputs.append(int(inp))
         else:
-            print("McCulloch-Pitts Neural Model only accepts digit inputs.")
+            print("McCulloch-Pitts Neural Model only accepts binary inputs.")
             exit()
     
     return inputs
